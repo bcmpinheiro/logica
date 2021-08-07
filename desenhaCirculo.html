@@ -1,5 +1,4 @@
 <canvas width="600" height="400"></canvas>
-
 <script>
 
   var tela = document.querySelector('canvas');
@@ -11,14 +10,29 @@
 
     pincel.fillStyle = cor;
     pincel.beginPath();
-    pincel.arc(x, y, raio, 0, 2 * 3.14);
+    pincel.arc(x, y, raio, 0, 2 * Math.PI);
     pincel.fill();
   }
 
-  desenhaCirculo(300, 200, 2 * 3.14, "red");
-  desenhaCirculo(312, 200, 2 * 3.14, "black");
-  desenhaCirculo(300, 212, 2 * 3.14, "blue");
-  desenhaCirculo(288, 200, 2 * 3.14, "orange");
-  desenhaCirculo(300, 188, 2 * 3.14, "yellow");
+  function desenhaFlor(x, y) {
+    desenhaCirculo(x, y + 20, 10, "blue");
+    desenhaCirculo(x, y, 10, "red");
+    desenhaCirculo(x, y - 20, 10, "yellow");
+    desenhaCirculo(x - 20, y, 10, "orange");
+    desenhaCirculo(x + 20, y, 10, "black");
+  }
+
+  desenhaFlor(300, 200);
+  desenhaFlor(150, 200);
+  desenhaFlor(450, 200);
+  desenhaFlor(150, 100);
+  desenhaFlor(150, 100);
+  desenhaFlor(300, 100);
+  desenhaFlor(450, 100);
+  desenhaFlor(450, 300);
+  desenhaFlor(150, 100);
+  desenhaFlor(300, 300);
+  desenhaFlor(150, 300);
+
 
 </script>
