@@ -14,11 +14,22 @@
 
     var x = evento.pageX - tela.offsetLeft;
     var y = evento.pageY - tela.offsetTop;
+
+    if (evento.shiftKey) {
+
+      alert("você clicou pressionando SHIFT");
+    }
+
+
+
     pincel.fillStyle = cores[indiceCorAtual];
     pincel.beginPath();
     pincel.arc(x, y, 10, 0, 2 * 3.14);
     pincel.fill();
     console.log(x + " , " + y);
+
+
+
   }
   tela.onclick = desenhaCirculo;
 
