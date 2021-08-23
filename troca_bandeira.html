@@ -47,12 +47,14 @@
   var mostraBrasil = true;
 
   function trocaBandeira() {
-    if (mostraBrasil == true) {
+    if (mostraBrasil) {
       desenhaBandeiraBrasil();
-      mostraBrasil = false;
     } else {
+
       desenhaBandeiraAlemanha();
     }
+    mostraBrasil = !mostraBrasil;
+    // aqui inverte o valor
 
   }
   setInterval(trocaBandeira, 3000);
